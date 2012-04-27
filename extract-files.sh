@@ -20,8 +20,9 @@ DEVICE=rk2918
 MANUFACTURER=rockchip
 
 mkdir -p ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
-adb pull /rk29xxnand_ko.ko.2.6.32.27 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/rk29xxnand_ko.ko.2.6.32.27
-adb pull /rk29xxnand_ko.ko.3.0.8+ ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/rk29xxnand_ko.ko.3.0.8+
+#adb pull /rk29xxnand_ko.ko.2.6.32.27 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/rk29xxnand_ko.ko#.2.6.32.27
+adb pull /rk29xxnand_ko.ko.3.0.8+ ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/rk29xxnand_ko.ko
+#.3.0.8+
 adb pull /system/lib/egl/libEGL_VIVANTE.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/libEGL_VIVANTE.so
 adb pull /system/lib/egl/libGLES_android.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/libGLES_android.so
 adb pull /system/lib/egl/libGLESv1_CM_VIVANTE.so ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/libGLESv1_CM_VIVANTE.so

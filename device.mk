@@ -19,13 +19,14 @@
 #
 # Everything in this directory will become public
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/rockchip/rk2918/kernel
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
+TARGET_PREBUILT_KERNEL := device/rockchip/rk2918/kernel
+#ifeq ($(TARGET_PREBUILT_KERNEL),)
+#LOCAL_KERNEL := device/rockchip/rk2918/kernel
+#else
+#LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+#endif
 
-DEVICE_PACKAGE_OVERLAYS := device/rockchip/rk2918/overlay
+#DEVICE_PACKAGE_OVERLAYS := device/rockchip/rk2918/overlay
 
 # This device is xhdpi.  However the platform doesn't
 # currently contain all of the bitmaps at xhdpi density so
@@ -56,9 +57,11 @@ DEVICE_PACKAGE_OVERLAYS := device/rockchip/rk2918/overlay
 
 PRODUCT_COPY_FILES := \
 	$(LOCAL_KERNEL):kernel \
-	device/rockchip/rk2918/init.rk29board.rc:root/init.rk29borad.rc \
+	device/rockchip/rk2918/init.rk29board.rc:root/init.rk29board.rc \
 	device/rockchip/rk2918/init.rk2918.usb.rc:root/init.rk2918.usb.rc \
 	device/rockchip/rk2918/ueventd.rk29board.rc:root/ueventd.rk29board.rc \
+#	device/rockchip/rk2918/vendor/rk29xxnand_ko.ko.2.6.32.27:root/rk29xxnand_ko.ko.2.6.32.27 \
+#	device/rockchip/rk2918/vendor/rk29xxnand_ko.ko.3.0.8+:root/rk29xxnand_ko.ko.3.0.8+ \
 #	device/rockchip/rk2918/media_profiles.xml:system/etc/media_profiles.xml \
 #	device/rockchip/rk2918/gps.conf:system/etc/gps.conf
 
